@@ -1642,7 +1642,7 @@ class Component extends DCLogic {
   restart = () => this.setState({qPhase:'start', qi:0, qTotals:{environment:0,emotion:0,identity:0,system:0,guidance:0}, qRaw:0, qAnswers:[], tipName:'', tipEmail:'', tipSent:false, tipError:''});
 
   // Lead z quizu → webhook ELMS (główny CRM: zapis odpowiedzi, tagowanie, scoring; ELMS przekazuje dalej do narzędzia mailowego)
-  ELMS_WEBHOOK_URL = 'https://TODO-ELMS-WEBHOOK-URL'; // TODO Tomasz: wklej realny URL webhooka ELMS (endpoint przyjmujący JSON POST)
+  ELMS_WEBHOOK_URL = 'https://hook.eu1.make.com/cpz7o4m9zak54986cndcwbid0r1h969d'; // TODO Tomasz: wklej realny URL webhooka ELMS (endpoint przyjmujący JSON POST)
   sendQuizTipEmail = (lead, quizResult) => {
     const payload = {
       email: lead.email,
