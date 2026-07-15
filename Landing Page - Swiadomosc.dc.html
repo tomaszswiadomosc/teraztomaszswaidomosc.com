@@ -1750,5 +1750,26 @@ class Component extends DCLogic {
 }
 
 </script>
+<script>
+(function(){
+  function syncOpinie(){
+    var track=document.querySelector('[data-screen-label="Hall of Fame"] > div');
+    if(!track) return;
+    var cards=[].slice.call(track.children).filter(function(c){return c.tagName==='DIV'&&c.firstElementChild;});
+    if(!cards.length) return;
+    var active=null,maxz=-1;
+    cards.forEach(function(c){var z=parseInt(getComputedStyle(c).zIndex)||0; if(z>maxz){maxz=z;active=c;}});
+    if(active){ track.style.height=(active.firstElementChild.offsetHeight+70)+'px'; }
+  }
+  function boot(){
+    syncOpinie();
+    var track=document.querySelector('[data-screen-label="Hall of Fame"] > div');
+    if(track){ try{ new MutationObserver(syncOpinie).observe(track,{attributes:true,attributeFilter:['style'],subtree:true,childList:true}); }catch(e){} }
+    setInterval(syncOpinie,800);
+  }
+  window.addEventListener('load',function(){ setTimeout(boot,400); });
+  window.addEventListener('resize',syncOpinie);
+})();
+</script>
 </body>
 </html>
