@@ -374,7 +374,8 @@ a:focus-visible,button:focus-visible{outline:2px solid rgba(120,180,255,.95);out
   .prog-grid{grid-template-columns:1fr!important;}
   .oferta-narzedzia{grid-template-columns:1fr!important;}
   .minut-grid{grid-template-columns:1fr!important;}
-  [data-screen-label="quiz-breakdown"]{grid-template-columns:repeat(3,1fr)!important;}
+  [data-screen-label="quiz-breakdown"]{display:flex!important;flex-wrap:wrap!important;justify-content:center!important;}
+  [data-screen-label="quiz-breakdown"]>*{flex:0 0 calc(33.333% - 6px)!important;}
   .sticky-cta{display:flex!important;}
   .hero-proof-grid{grid-template-columns:repeat(2,1fr)!important;}
   .hero-grid{grid-template-columns:1fr!important;}
@@ -543,7 +544,7 @@ a:focus-visible,button:focus-visible{outline:2px solid rgba(120,180,255,.95);out
             <form onsubmit="{{ onTipSubmit }}" novalidate="{{ true }}" style="display:flex;flex-direction:column;gap:10px;">
               <input type="text" value="{{ tipName }}" oninput="{{ onTipName }}" placeholder="Imię" aria-label="Imię" autocomplete="given-name" style="width:100%;padding:12px 15px;border-radius:var(--r-sm);border:1px solid rgba(91,141,201,.35);background:rgba(4,9,18,.7);color:#fff;font-family:Manrope,sans-serif;font-size:14.5px;outline:none;">
               <input type="email" value="{{ tipEmail }}" oninput="{{ onTipEmail }}" placeholder="twoj@email.pl" aria-label="Adres e-mail" autocomplete="email" style="width:100%;padding:12px 15px;border-radius:var(--r-sm);border:1px solid rgba(91,141,201,.35);background:rgba(4,9,18,.7);color:#fff;font-family:Manrope,sans-serif;font-size:14.5px;outline:none;">
-              <label style="display:flex;align-items:flex-start;gap:8px;font-size:12px;line-height:1.5;color:#8aa0bc;cursor:pointer;"><input type="checkbox" checked="{{ tipConsent }}" onclick="{{ onTipConsent }}" style="margin-top:2px;flex-shrink:0;width:15px;height:15px;accent-color:#2f80ed;">Zgadzam się na przetwarzanie danych w celu wysłania wskazówki. <a href="polityka-prywatnosci.html" target="_blank" rel="noopener" style="color:var(--accent,#5b8dc9);">polityka prywatności</a>.</label>
+              <label style="display:flex;align-items:flex-start;gap:8px;font-size:12px;line-height:1.5;color:#8aa0bc;cursor:pointer;"><input type="checkbox" checked="{{ tipConsent }}" onclick="{{ onTipConsent }}" style="margin-top:2px;flex-shrink:0;width:15px;height:15px;accent-color:#2f80ed;"><span>Zgadzam się na przetwarzanie danych w celu wysłania wskazówki. <a href="polityka-prywatnosci.html" target="_blank" rel="noopener" style="color:var(--accent,#5b8dc9);">polityka prywatności</a>.</span></label>
               <sc-if value="{{ tipError }}"><p style="margin:0;font-size:12.5px;color:#e07070;">{{ tipError }}</p></sc-if>
               <button type="submit" style="width:100%;padding:13px;border:none;border-radius:var(--r-sm);cursor:pointer;color:#fff;font-family:Montserrat,sans-serif;font-size:15px;font-weight:700;background:linear-gradient(135deg,#2e9bff,#1479f1);">Wyślij mi wynik na maila</button>
             </form>
