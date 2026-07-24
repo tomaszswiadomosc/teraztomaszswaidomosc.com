@@ -96,7 +96,7 @@ try {
     document.addEventListener('click', function (e) {
       var t = e.target;
       if (!t || !t.closest) return;
-      if (t.closest('a[href*="elms.pl"]')) { push('checkout_start', { value: 397, currency: 'PLN' }); }
+      if (t.closest('a[href*="elms.pl"]')) { push('checkout_start', { value: 197, currency: 'PLN' }); }
       else if (t.closest('a[href*="tally.so"]')) { push('mentoring_click'); }
     }, true);
 
@@ -113,7 +113,7 @@ try {
           entries.forEach(function (en) {
             if (en.isIntersecting && !vcDone) {
               vcDone = true;
-              push('view_offer', { value: 397, currency: 'PLN' });
+              push('view_offer', { value: 197, currency: 'PLN' });
               io.disconnect();
             }
           });
@@ -161,7 +161,7 @@ try {
 <meta name="ext-resource-dependency" content="opinie/krzysztof.jpg" data-resource-id="opinie/krzysztof.jpg">
 <meta name="ext-resource-dependency" content="opinie/michal.jpg" data-resource-id="opinie/michal.jpg">
 <meta name="ext-resource-dependency" content="opinie/alan-dj.jpg" data-resource-id="opinie/alan-dj.jpg">
-<template id="__bundler_thumbnail" data-bg-color="#040913"><svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg"><rect width="1200" height="800" fill="#040913"/><rect x="200" y="120" width="800" height="6" rx="3" fill="#a3895c" opacity=".9"/><text x="600" y="320" font-family="sans-serif" font-size="60" font-weight="900" fill="#ffffff" text-anchor="middle">ŚWIADOME NAWYKI</text><text x="600" y="390" font-family="sans-serif" font-size="22" fill="#a3895c" text-anchor="middle" letter-spacing="8">PROGRAM MENTALNY · 28 DNI · 397 ZŁ</text><rect x="350" y="460" width="500" height="60" rx="14" fill="#a17f47"/><text x="600" y="499" font-family="sans-serif" font-size="22" font-weight="700" fill="#ffffff" text-anchor="middle">Zaczynam program - 397 zł</text></svg></template>
+<template id="__bundler_thumbnail" data-bg-color="#040913"><svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg"><rect width="1200" height="800" fill="#040913"/><rect x="200" y="120" width="800" height="6" rx="3" fill="#a3895c" opacity=".9"/><text x="600" y="320" font-family="sans-serif" font-size="60" font-weight="900" fill="#ffffff" text-anchor="middle">ŚWIADOME NAWYKI</text><text x="600" y="390" font-family="sans-serif" font-size="22" fill="#a3895c" text-anchor="middle" letter-spacing="8">PROGRAM MENTALNY · 28 DNI · 397 ZŁ</text><rect x="350" y="460" width="500" height="60" rx="14" fill="#a17f47"/><text x="600" y="499" font-family="sans-serif" font-size="22" font-weight="700" fill="#ffffff" text-anchor="middle">Zaczynam program - 197 zł</text></svg></template>
 <script src="./support.js"></script>
 </head>
 <body>
@@ -290,7 +290,7 @@ body::after{content:"";position:fixed;inset:-60%;z-index:9999;pointer-events:non
 /* Aurora border — wolno wirująca obwódka (karta oferty i gwarancji) */
 .fx-aurora{position:relative;}
 .fx-aurora::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1.5px;background:conic-gradient(from var(--fx-a),rgba(91,141,201,.55),rgba(196,166,112,.26) 22%,rgba(91,141,201,.05) 46%,rgba(77,155,255,.5) 60%,rgba(196,166,112,.18) 80%,rgba(91,141,201,.55));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);mask-composite:exclude;pointer-events:none;z-index:1;animation:fx-rot 16s linear infinite;}
-/* Oddychający glow za ceną 397 zł */
+/* Oddychający glow za ceną 197 zł */
 .fx-price-glow::before{content:"";position:absolute;z-index:-1;left:105px;top:50%;width:320px;height:150px;transform:translate(-50%,-50%);background:radial-gradient(closest-side,rgba(91,141,201,.30),rgba(196,166,112,.10) 55%,transparent 78%);animation:fx-breathe 5.5s ease-in-out infinite;pointer-events:none;}
 .fx-count{font-variant-numeric:tabular-nums;}
 .fx-progress{display:none;}
@@ -534,18 +534,18 @@ a:focus-visible,button:focus-visible{outline:2px solid rgba(120,180,255,.95);out
         <div style="border:1px solid rgba(91,141,201,.35);border-radius:var(--r-md);background:linear-gradient(160deg,rgba(14,32,62,.8),rgba(8,16,32,.9));padding:18px;margin-bottom:14px;">
           <p style="margin:0 0 10px;font-family:Montserrat,sans-serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-text);text-align:center;">Twój pierwszy krok</p>
           <p style="margin:0 0 14px;font-size:14px;line-height:1.6;color:#dbe6f4;text-align:center;">{{ qReco }}</p>
-          <div style="display:flex;align-items:baseline;justify-content:center;gap:12px;margin:0 0 16px;"><span style="font-size:17px;color:#8aa0bc;text-decoration:line-through;">1 032 zł</span><span style="font-family:Montserrat,sans-serif;font-size:32px;font-weight:900;color:#fff;">397 zł</span></div>
+          <div style="display:flex;align-items:baseline;justify-content:center;gap:12px;margin:0 0 16px;"><span style="font-size:17px;color:#8aa0bc;text-decoration:line-through;">1 032 zł</span><span style="font-family:Montserrat,sans-serif;font-size:32px;font-weight:900;color:#fff;">197 zł</span></div>
           <div data-screen-label="decyzja-cards" style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:13px;">
             <div style="border:1px solid rgba(91,141,201,.22);border-radius:var(--r-sm);background:rgba(4,10,22,.65);padding:13px;"><p style="margin:0 0 6px;font-family:Montserrat,sans-serif;font-size:10px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#8aa0bc;">Zostaję z wynikiem</p><p style="margin:0 0 7px;font-family:Montserrat,sans-serif;font-size:14px;font-weight:700;color:#fff;">Wiem, ale odkładam.</p><p style="margin:0;font-size:12px;line-height:1.5;color:#9fb1c8;">Bez struktury łatwo wrócić do starego rytmu.</p></div>
             <div style="border:1px solid rgba(196,166,112,.5);border-radius:var(--r-sm);background:rgba(4,10,22,.65);padding:13px;"><p style="margin:0 0 6px;font-family:Montserrat,sans-serif;font-size:10px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--gold-text);">Program 28 dni</p><p style="margin:0 0 5px;font-family:Montserrat,sans-serif;font-size:14px;font-weight:700;color:#fff;">Zamieniam wynik w działanie.</p><p style="margin:0;font-size:11px;line-height:1.5;color:#dbe6f4;">20 minut dziennie · rozmowa 30 min · gwarancja</p></div>
           </div>
-          <a href="https://tomaszswiadomosc.elms.pl/s/swiadome-nawyki.html" style="display:block;width:100%;text-align:center;padding:16px;border-radius:var(--r-sm);text-decoration:none;color:var(--gold-action-text);font-family:Montserrat,sans-serif;font-size:17px;font-weight:800;background:linear-gradient(180deg,var(--gold-a1),var(--gold-a2));border:1px solid var(--gold-border);box-shadow:var(--shadow-sm);margin-bottom:10px;">Zaczynam program - 397 zł</a>
+          <a href="https://tomaszswiadomosc.elms.pl/s/swiadome-nawyki.html" style="display:block;width:100%;text-align:center;padding:16px;border-radius:var(--r-sm);text-decoration:none;color:var(--gold-action-text);font-family:Montserrat,sans-serif;font-size:17px;font-weight:800;background:linear-gradient(180deg,var(--gold-a1),var(--gold-a2));border:1px solid var(--gold-border);box-shadow:var(--shadow-sm);margin-bottom:10px;">Zaczynam program - 197 zł</a>
           <a href="#vsl" style="display:block;width:100%;text-align:center;padding:13px;border-radius:var(--r-sm);text-decoration:none;color:#dbe6f4;font-family:Montserrat,sans-serif;font-size:15px;font-weight:700;border:1px solid rgba(91,141,201,.3);background:rgba(4,10,22,.6);">Obejrzyj video</a>
           <div style="margin-top:12px;border:1px dashed rgba(196,166,112,.55);border-radius:var(--r-sm);background:rgba(196,166,112,.06);padding:14px 16px;text-align:center;">
             <p style="margin:0 0 4px;font-family:Montserrat,sans-serif;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-text);">Twój kod za rozwiązanie quizu</p>
-            <p style="margin:0 0 6px;font-size:13px;line-height:1.5;color:#dbe6f4;">Użyj kodu przy zakupie i odbierz <strong style="color:var(--gold-text);">47 zł zniżki</strong>. Zapłacisz <strong style="color:#fff;">350 zł</strong> zamiast 397 zł:</p>
+            <p style="margin:0 0 6px;font-size:13px;line-height:1.5;color:#dbe6f4;">Użyj kodu przy zakupie i odbierz <strong style="color:var(--gold-text);">47 zł zniżki</strong>. Zapłacisz <strong style="color:#fff;">350 zł</strong> zamiast 197 zł:</p>
             <span style="display:inline-block;font-family:Montserrat,sans-serif;font-size:20px;font-weight:900;letter-spacing:.08em;color:#fff;border:1px solid rgba(196,166,112,.5);border-radius:9px;padding:6px 18px;background:rgba(4,10,22,.6);">KOD47</span>
-            <p style="margin:8px 0 0;font-size:10.5px;line-height:1.5;color:#6a859a;text-align:center;">Cena programu: <strong style="color:#dbe6f4;">397 zł</strong> · z kodem KOD47 zapłacisz <strong style="color:var(--gold-text);">350 zł</strong></p>
+            <p style="margin:8px 0 0;font-size:10.5px;line-height:1.5;color:#6a859a;text-align:center;">Cena programu: <strong style="color:#dbe6f4;">197 zł</strong> · z kodem KOD47 zapłacisz <strong style="color:var(--gold-text);">350 zł</strong></p>
           </div>
         </div>
         <div style="border:1px dashed rgba(91,141,201,.4);border-radius:var(--r-sm);background:rgba(4,10,22,.4);padding:18px;margin-bottom:14px;">
@@ -683,7 +683,7 @@ a:focus-visible,button:focus-visible{outline:2px solid rgba(120,180,255,.95);out
         <div style="flex-shrink:0;width:48px;height:48px;display:flex;align-items:center;justify-content:center;">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#a3895c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"/><path d="M4 20V9l4 3 4-6 4 6 4-3v11"/></svg>
         </div>
-        <p style="margin:0;font-family:Montserrat,sans-serif;font-size:clamp(16px,1.8vw,19px);line-height:1.55;color:#dbe6f4;">Jednorazowe <strong style="color:#fff;font-size:clamp(20px,2.2vw,26px);font-weight:900;">397 zł</strong> to zwykle ułamek tego,<br>co schemat zabiera Ci w jeden miesiąc.</p>
+        <p style="margin:0;font-family:Montserrat,sans-serif;font-size:clamp(16px,1.8vw,19px);line-height:1.55;color:#dbe6f4;">Jednorazowe <strong style="color:#fff;font-size:clamp(20px,2.2vw,26px);font-weight:900;">197 zł</strong> to zwykle ułamek tego,<br>co schemat zabiera Ci w jeden miesiąc.</p>
       </div>
     </div>
   </div>
@@ -743,7 +743,7 @@ a:focus-visible,button:focus-visible{outline:2px solid rgba(120,180,255,.95);out
       <div style="display:flex;align-items:flex-start;gap:10px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3ddc91" stroke-width="2.5" stroke-linecap="round" style="flex-shrink:0;margin-top:2px;"><polyline points="20 6 9 17 4 12"></polyline></svg><span style="font-size:14.5px;color:#dbe6f4;">Zobaczysz, gdzie naprawdę zaczyna się stary schemat.</span></div>
       <div style="display:flex;align-items:flex-start;gap:10px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3ddc91" stroke-width="2.5" stroke-linecap="round" style="flex-shrink:0;margin-top:2px;"><polyline points="20 6 9 17 4 12"></polyline></svg><span style="font-size:14.5px;color:#dbe6f4;">Poznasz, jak działa 28-dniowy proces Świadomych Nawyków.</span></div>
     </div>
-    <div style="text-align:center;"><a href="https://tomaszswiadomosc.elms.pl/s/swiadome-nawyki.html" style="display:inline-flex;align-items:center;justify-content:center;padding:17px 40px;border-radius:var(--r-sm);text-decoration:none;color:var(--gold-action-text);font-family:Montserrat,sans-serif;font-size:17px;font-weight:800;background:linear-gradient(180deg,var(--gold-a1),var(--gold-a2));border:1px solid var(--gold-border);box-shadow:var(--shadow-md);">Zaczynam program - 397 zł</a></div>
+    <div style="text-align:center;"><a href="https://tomaszswiadomosc.elms.pl/s/swiadome-nawyki.html" style="display:inline-flex;align-items:center;justify-content:center;padding:17px 40px;border-radius:var(--r-sm);text-decoration:none;color:var(--gold-action-text);font-family:Montserrat,sans-serif;font-size:17px;font-weight:800;background:linear-gradient(180deg,var(--gold-a1),var(--gold-a2));border:1px solid var(--gold-border);box-shadow:var(--shadow-md);">Zaczynam program - 197 zł</a></div>
   </div>
 </section>
 
@@ -792,7 +792,7 @@ a:focus-visible,button:focus-visible{outline:2px solid rgba(120,180,255,.95);out
     <p style="text-align:center;margin:28px 0 8px;font-size:16px;color:#9fb1c8;">W której ćwiartce jesteś dzisiaj?</p>
     <p style="text-align:center;margin:0 0 20px;"><a href="#quiz" style="font-size:14px;color:var(--accent,#5b8dc9);text-decoration:underline;">Nie wiesz, w której ćwiartce jesteś? Sprawdź w 2 minuty →</a></p>
     <div style="text-align:center;display:flex;flex-wrap:wrap;gap:12px;justify-content:center;">
-      <a href="https://tomaszswiadomosc.elms.pl/s/swiadome-nawyki.html" style="display:inline-flex;align-items:center;justify-content:center;padding:16px 32px;border-radius:var(--r-sm);text-decoration:none;color:var(--gold-action-text);font-family:Montserrat,sans-serif;font-size:17px;font-weight:800;background:linear-gradient(180deg,var(--gold-a1),var(--gold-a2));border:1px solid var(--gold-border);box-shadow:var(--shadow-md);">Zaczynam program - 397 zł</a>
+      <a href="https://tomaszswiadomosc.elms.pl/s/swiadome-nawyki.html" style="display:inline-flex;align-items:center;justify-content:center;padding:16px 32px;border-radius:var(--r-sm);text-decoration:none;color:var(--gold-action-text);font-family:Montserrat,sans-serif;font-size:17px;font-weight:800;background:linear-gradient(180deg,var(--gold-a1),var(--gold-a2));border:1px solid var(--gold-border);box-shadow:var(--shadow-md);">Zaczynam program - 197 zł</a>
       <a href="#quiz" style="display:inline-flex;align-items:center;padding:16px 26px;border-radius:var(--r-sm);text-decoration:none;color:#fff;font-family:Montserrat,sans-serif;font-size:16px;font-weight:700;border:1.5px solid rgba(91,141,201,.35);background:rgba(8,20,48,.5);">Sprawdzam gotowość</a>
     </div>
   </div>
@@ -946,7 +946,7 @@ a:focus-visible,button:focus-visible{outline:2px solid rgba(120,180,255,.95);out
 </section>
 
 <!-- CTA PO TIMELINE -->
-<div style="text-align:center;padding:0 48px 60px;"><a href="https://tomaszswiadomosc.elms.pl/s/swiadome-nawyki.html" style="display:inline-flex;align-items:center;justify-content:center;padding:16px 32px;border-radius:var(--r-sm);text-decoration:none;color:var(--gold-action-text);font-family:Montserrat,sans-serif;font-size:17px;font-weight:800;background:linear-gradient(180deg,var(--gold-a1),var(--gold-a2));border:1px solid var(--gold-border);box-shadow:var(--shadow-md);">Chcę przejść pierwszy proces - 397 zł</a></div>
+<div style="text-align:center;padding:0 48px 60px;"><a href="https://tomaszswiadomosc.elms.pl/s/swiadome-nawyki.html" style="display:inline-flex;align-items:center;justify-content:center;padding:16px 32px;border-radius:var(--r-sm);text-decoration:none;color:var(--gold-action-text);font-family:Montserrat,sans-serif;font-size:17px;font-weight:800;background:linear-gradient(180deg,var(--gold-a1),var(--gold-a2));border:1px solid var(--gold-border);box-shadow:var(--shadow-md);">Chcę przejść pierwszy proces - 197 zł</a></div>
 
 <!-- DLACZEGO 28 DNI -->
 <section data-screen-label="Dlaczego 28 dni" style="padding:60px 0;">
@@ -998,7 +998,7 @@ a:focus-visible,button:focus-visible{outline:2px solid rgba(120,180,255,.95);out
         </div>
       </div>
     </div>
-    <div style="text-align:center;margin-top:32px;"><a href="https://tomaszswiadomosc.elms.pl/s/swiadome-nawyki.html" style="display:inline-flex;align-items:center;justify-content:center;padding:16px 36px;border-radius:var(--r-sm);text-decoration:none;color:var(--gold-action-text);font-family:Montserrat,sans-serif;font-size:17px;font-weight:800;background:linear-gradient(180deg,var(--gold-a1),var(--gold-a2));border:1px solid var(--gold-border);box-shadow:var(--shadow-md);">Zaczynam program - 397 zł</a></div>
+    <div style="text-align:center;margin-top:32px;"><a href="https://tomaszswiadomosc.elms.pl/s/swiadome-nawyki.html" style="display:inline-flex;align-items:center;justify-content:center;padding:16px 36px;border-radius:var(--r-sm);text-decoration:none;color:var(--gold-action-text);font-family:Montserrat,sans-serif;font-size:17px;font-weight:800;background:linear-gradient(180deg,var(--gold-a1),var(--gold-a2));border:1px solid var(--gold-border);box-shadow:var(--shadow-md);">Zaczynam program - 197 zł</a></div>
   </div>
 </section>
 
@@ -1067,7 +1067,7 @@ a:focus-visible,button:focus-visible{outline:2px solid rgba(120,180,255,.95);out
         <p style="margin:0;font-size:12.5px;font-weight:700;color:var(--gold-text);">Paweł - Trener mentalny</p>
       </div>
     </div>
-    <div style="text-align:center;"><a href="https://tomaszswiadomosc.elms.pl/s/swiadome-nawyki.html" style="display:inline-flex;align-items:center;justify-content:center;padding:17px 40px;border-radius:var(--r-sm);text-decoration:none;color:var(--gold-action-text);font-family:Montserrat,sans-serif;font-size:17px;font-weight:800;background:linear-gradient(180deg,var(--gold-a1),var(--gold-a2));border:1px solid var(--gold-border);box-shadow:var(--shadow-md);">Zaczynam program - 397 zł</a></div>
+    <div style="text-align:center;"><a href="https://tomaszswiadomosc.elms.pl/s/swiadome-nawyki.html" style="display:inline-flex;align-items:center;justify-content:center;padding:17px 40px;border-radius:var(--r-sm);text-decoration:none;color:var(--gold-action-text);font-family:Montserrat,sans-serif;font-size:17px;font-weight:800;background:linear-gradient(180deg,var(--gold-a1),var(--gold-a2));border:1px solid var(--gold-border);box-shadow:var(--shadow-md);">Zaczynam program - 197 zł</a></div>
   </div>
 </section>
 
@@ -1125,7 +1125,7 @@ a:focus-visible,button:focus-visible{outline:2px solid rgba(120,180,255,.95);out
         <p style="margin:0;font-size:15.5px;line-height:1.6;color:#dbe6f4;"><strong style="color: var(--gold-text);">Po wykonaniu procesu umawiasz rozmowę kierunkową z Tomaszem.</strong> <br>30 minut. Bez dodatkowej opłaty.</p>
       </div>
     </div>
-    <div style="text-align:center;"><a href="https://tomaszswiadomosc.elms.pl/s/swiadome-nawyki.html" style="display:inline-flex;align-items:center;justify-content:center;padding:16px 32px;border-radius:var(--r-sm);text-decoration:none;color:var(--gold-action-text);font-family:Montserrat,sans-serif;font-size:17px;font-weight:800;background:linear-gradient(180deg,var(--gold-a1),var(--gold-a2));border:1px solid var(--gold-border);box-shadow:var(--shadow-md);">Zaczynam program - 397 zł</a></div>
+    <div style="text-align:center;"><a href="https://tomaszswiadomosc.elms.pl/s/swiadome-nawyki.html" style="display:inline-flex;align-items:center;justify-content:center;padding:16px 32px;border-radius:var(--r-sm);text-decoration:none;color:var(--gold-action-text);font-family:Montserrat,sans-serif;font-size:17px;font-weight:800;background:linear-gradient(180deg,var(--gold-a1),var(--gold-a2));border:1px solid var(--gold-border);box-shadow:var(--shadow-md);">Zaczynam program - 197 zł</a></div>
   </div>
 </section>
 
@@ -1308,7 +1308,7 @@ a:focus-visible,button:focus-visible{outline:2px solid rgba(120,180,255,.95);out
         <p style="margin:0;font-size:16px;line-height:1.7;color:#dbe6f4;">Możesz przez 28 dni wykonać konkretne zadania, zobaczyć swój schemat, zbudować rytm dnia i omówić pierwszy kierunek z Tomaszem.</p>
       </div>
     </div>
-    <div style="text-align:center;"><a href="https://tomaszswiadomosc.elms.pl/s/swiadome-nawyki.html" style="display:inline-flex;align-items:center;justify-content:center;padding:17px 40px;border-radius:var(--r-sm);text-decoration:none;color:var(--gold-action-text);font-family:Montserrat,sans-serif;font-size:17px;font-weight:800;background:linear-gradient(180deg,var(--gold-a1),var(--gold-a2));border:1px solid var(--gold-border);box-shadow:var(--shadow-md);">Zaczynam program - 397 zł</a></div>
+    <div style="text-align:center;"><a href="https://tomaszswiadomosc.elms.pl/s/swiadome-nawyki.html" style="display:inline-flex;align-items:center;justify-content:center;padding:17px 40px;border-radius:var(--r-sm);text-decoration:none;color:var(--gold-action-text);font-family:Montserrat,sans-serif;font-size:17px;font-weight:800;background:linear-gradient(180deg,var(--gold-a1),var(--gold-a2));border:1px solid var(--gold-border);box-shadow:var(--shadow-md);">Zaczynam program - 197 zł</a></div>
   </div>
 </section>
 
@@ -1324,7 +1324,7 @@ a:focus-visible,button:focus-visible{outline:2px solid rgba(120,180,255,.95);out
         <p style="margin:0 0 16px;font-family:Montserrat,sans-serif;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-text);">Program Mentalny · Świadome Nawyki · 28 Dni</p>
         <h3 style="margin:0 0 20px;font-family:Montserrat,sans-serif;font-size:clamp(22px,2.6vw,28px);font-weight:900;color:#fff;">Program Mentalny Świadome Nawyki</h3>
         <div class="fx-price-glow" style="display:flex;align-items:baseline;gap:12px;margin:0 0 10px;position:relative;isolation:isolate;"><span class="j-price-pop" style="font-family:Montserrat,sans-serif;font-size:clamp(48px,7vw,64px);font-weight:900;color:#fff;line-height:1;"><span class="fx-count" data-fx-to="397">397</span> zł</span><span style="font-size:16px;color:#8aa0bc;">jednorazowo</span></div>
-        <p style="margin:0 0 28px;font-size:14px;line-height:1.6;color:#9fb1c8;">To mniej niż <strong style="color:#dbe6f4;">14 zł dziennie</strong> przez 28 dni, a w cenie masz też rozmowę 30 min z Tomaszem.</p>
+        <p style="margin:0 0 28px;font-size:14px;line-height:1.6;color:#9fb1c8;">To mniej niż <strong style="color:#dbe6f4;">8 zł dziennie</strong> przez 28 dni, a w cenie masz też rozmowę 30 min z Tomaszem.</p>
         <div style="border:1px solid rgba(91,141,201,.28);border-radius:var(--r-md);background:rgba(4,10,22,.5);padding:22px;margin:0 0 26px;">
           <p style="margin:0 0 16px;font-family:Montserrat,sans-serif;font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-text);">Co składa się na wartość</p>
           <div style="display:flex;flex-direction:column;gap:12px;font-size:14.5px;color:#dbe6f4;">
@@ -1339,13 +1339,13 @@ a:focus-visible,button:focus-visible{outline:2px solid rgba(120,180,255,.95);out
           </div>
           <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-top:18px;padding-top:15px;border-top:1px solid rgba(91,141,201,.2);">
             <span style="font-family:Montserrat,sans-serif;font-size:13px;font-weight:700;color:#dbe6f4;">Łączna wartość</span>
-            <span><span style="font-size:15px;color:#8aa0bc;text-decoration:line-through;margin-right:10px;">1 032 zł</span><strong style="font-family:Montserrat,sans-serif;font-size:22px;font-weight:900;color:#fff;">Dziś 397 zł</strong></span>
+            <span><span style="font-size:15px;color:#8aa0bc;text-decoration:line-through;margin-right:10px;">1 032 zł</span><strong style="font-family:Montserrat,sans-serif;font-size:22px;font-weight:900;color:#fff;">Dziś 197 zł</strong></span>
           </div>
         </div>
         <!-- Bramka płatności: elms.pl — kod KOD47 (-47 zł, cena 350 zł) musi być skonfigurowany po stronie bramki -->
-        <!-- TODO Tomasz: Purchase odpala się na stronie podziękowania elms.pl — wpiąć tam Meta Pixel + zdarzenie Purchase (value:397/350, currency:PLN), albo połączyć przez integrację/panel elms/CAPI. Bez tego nie policzymy sprzedaży z reklam. -->
+        <!-- TODO Tomasz: Purchase odpala się na stronie podziękowania elms.pl — wpiąć tam Meta Pixel + zdarzenie Purchase (value: 197/350, currency:PLN), albo połączyć przez integrację/panel elms/CAPI. Bez tego nie policzymy sprzedaży z reklam. -->
         <p style="margin:0 0 10px;text-align:center;font-size:13px;line-height:1.5;color:#8aa0bc;">Klikasz → bezpieczna płatność → dostęp na maila w ciągu 1 godziny.</p>
-        <a href="https://tomaszswiadomosc.elms.pl/s/swiadome-nawyki.html" class="fx-mag" style="display:block;width:100%;text-align:center;padding:19px;border-radius:var(--r-sm);text-decoration:none;color:var(--gold-action-text);font-family:Montserrat,sans-serif;font-size:18px;font-weight:800;background:linear-gradient(180deg,var(--gold-a1),var(--gold-a2));border:1px solid var(--gold-border);box-shadow:var(--shadow-md);">Zaczynam program - 397 zł</a>
+        <a href="https://tomaszswiadomosc.elms.pl/s/swiadome-nawyki.html" class="fx-mag" style="display:block;width:100%;text-align:center;padding:19px;border-radius:var(--r-sm);text-decoration:none;color:var(--gold-action-text);font-family:Montserrat,sans-serif;font-size:18px;font-weight:800;background:linear-gradient(180deg,var(--gold-a1),var(--gold-a2));border:1px solid var(--gold-border);box-shadow:var(--shadow-md);">Zaczynam program - 197 zł</a>
         <p style="margin:14px 0 0;text-align:center;font-family:Montserrat,sans-serif;font-size:13.5px;font-weight:700;color:#dbe6f4;">14 dni gwarancji. Piszesz jedno zdanie i dostajesz zwrot.</p>
         <div style="display:flex;align-items:center;justify-content:center;gap:14px;margin:12px 0 0;flex-wrap:wrap;">
           <img src="gwarancja-medal.png" alt="Gwarancja zwrotu" loading="lazy" style="height:40px;width:40px;object-fit:contain;flex-shrink:0;">
@@ -1394,7 +1394,7 @@ a:focus-visible,button:focus-visible{outline:2px solid rgba(120,180,255,.95);out
         <span style="font-family:Montserrat,sans-serif;font-size:13px;font-weight:700;color:#4d9bff;">14 dni, bez ryzyka. Zwrot bez tłumaczeń.</span>
       </div>
       <p style="margin:0 0 20px;font-size:13px;line-height:1.6;color:#6a859a;">Nie kupujesz pustej obietnicy. Masz 14 dni, żeby sprawdzić program własną pracą i spokojnie zdecydować.</p>
-      <a href="https://tomaszswiadomosc.elms.pl/s/swiadome-nawyki.html" style="display:inline-flex;align-items:center;justify-content:center;padding:16px 32px;border-radius:var(--r-sm);text-decoration:none;color:var(--gold-action-text);font-family:Montserrat,sans-serif;font-size:17px;font-weight:800;background:linear-gradient(180deg,var(--gold-a1),var(--gold-a2));border:1px solid var(--gold-border);box-shadow:var(--shadow-md);">Zaczynam program bez ryzyka - 397 zł</a>
+      <a href="https://tomaszswiadomosc.elms.pl/s/swiadome-nawyki.html" style="display:inline-flex;align-items:center;justify-content:center;padding:16px 32px;border-radius:var(--r-sm);text-decoration:none;color:var(--gold-action-text);font-family:Montserrat,sans-serif;font-size:17px;font-weight:800;background:linear-gradient(180deg,var(--gold-a1),var(--gold-a2));border:1px solid var(--gold-border);box-shadow:var(--shadow-md);">Zaczynam program bez ryzyka - 197 zł</a>
     </div>
   </div>
 </section>
@@ -1454,7 +1454,7 @@ a:focus-visible,button:focus-visible{outline:2px solid rgba(120,180,255,.95);out
     <h2 style="margin:0 0 18px;font-family:Montserrat,sans-serif;font-weight:900;font-size:clamp(26px,3vw,40px);line-height:1.1;color:#fff;">Za 28 dni możesz dalej zaczynać od nowa albo mieć za sobą <span style="color:var(--accent,#5b8dc9);">pierwszy prawdziwy proces</span>.</h2>
     <p style="margin:0 0 32px;font-size:16px;line-height:1.7;color:#9fb1c8;">Nie musisz czuć się idealnie gotowy. Wystarczy, że zrobisz pierwszy dzień. Resztę poprowadzi proces krok po kroku.</p>
     <div style="display:flex;flex-direction:column;align-items:center;gap:12px;">
-      <a href="https://tomaszswiadomosc.elms.pl/s/swiadome-nawyki.html" class="fx-mag" style="display:inline-flex;align-items:center;justify-content:center;padding:18px 48px;border-radius:var(--r-sm);text-decoration:none;color:var(--gold-action-text);font-family:Montserrat,sans-serif;font-size:18px;font-weight:800;background:linear-gradient(180deg,var(--gold-a1),var(--gold-a2));border:1px solid var(--gold-border);box-shadow:var(--shadow-md);">Zaczynam program - 397 zł</a>
+      <a href="https://tomaszswiadomosc.elms.pl/s/swiadome-nawyki.html" class="fx-mag" style="display:inline-flex;align-items:center;justify-content:center;padding:18px 48px;border-radius:var(--r-sm);text-decoration:none;color:var(--gold-action-text);font-family:Montserrat,sans-serif;font-size:18px;font-weight:800;background:linear-gradient(180deg,var(--gold-a1),var(--gold-a2));border:1px solid var(--gold-border);box-shadow:var(--shadow-md);">Zaczynam program - 197 zł</a>
       <a href="#vsl" style="display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:var(--r-sm);text-decoration:none;color:#dbe6f4;font-family:Montserrat,sans-serif;font-size:15px;font-weight:700;border:1px solid rgba(91,141,201,.35);background:rgba(8,20,48,.4);"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"></polygon></svg>Obejrzyj video</a>
     </div>
   </div>
@@ -1498,7 +1498,7 @@ a:focus-visible,button:focus-visible{outline:2px solid rgba(120,180,255,.95);out
 <!-- STICKY MOBILE CTA -->
 <div class="sticky-cta" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:100;padding:12px 16px 16px;background:linear-gradient(180deg,rgba(4,7,15,.0),rgba(4,7,15,.97));border-top:1px solid rgba(91,141,201,.18);align-items:center;justify-content:space-between;gap:10px;">
   <div>
-    <p style="margin:0;font-family:Montserrat,sans-serif;font-size:13px;font-weight:800;color:#fff;">Program 28 dni - 397 zł</p>
+    <p style="margin:0;font-family:Montserrat,sans-serif;font-size:13px;font-weight:800;color:#fff;">Program 28 dni - 197 zł</p>
     <p style="margin:0;font-size:11px;color:#8aa0bc;">Dostęp od razu · gwarancja po 28 zadaniach</p>
   </div>
   <a href="https://tomaszswiadomosc.elms.pl/s/swiadome-nawyki.html" style="flex-shrink:0;display:inline-flex;align-items:center;justify-content:center;padding:13px 20px;border-radius:var(--r-sm);text-decoration:none;color:var(--gold-action-text);font-family:Montserrat,sans-serif;font-size:15px;font-weight:800;background:linear-gradient(180deg,var(--gold-a1),var(--gold-a2));border:1px solid var(--gold-border);box-shadow:var(--shadow-sm);">Zaczynam</a>
@@ -1693,7 +1693,7 @@ class Component extends DCLogic {
         this._tipBusy = false;
         this.setState({ tipSent: true, tipError: '' });
         // zdarzenie do GTM: lead potwierdzony (webhook ELMS zwrócił sukces) — GTM mapuje to na GA4 „lead" i Meta „Lead"
-        try { window.dataLayer && window.dataLayer.push({ event: 'lead', value: 397, currency: 'PLN' }); } catch (e) {}
+        try { window.dataLayer && window.dataLayer.push({ event: 'lead', value: 197, currency: 'PLN' }); } catch (e) {}
       })
       .catch(() => {
         this._tipBusy = false;
